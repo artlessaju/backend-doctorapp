@@ -1,19 +1,19 @@
 // import json-server
 
-const jsonServer = require('db.json');
+import { create, router as _router, defaults } from 'json-server';
 
 
 // create a server application using jasonServer
 
-const docServer = jsonServer.create()
+const docServer = create()
 
 //setup path for db.json
 
-const router = jsonServer.router('db.json')
+const router = _router('db.json')
 
 //return a middleware used by json server
 
-const middleware = jsonServer.defaults()
+const middleware = defaults()
 
 // setup port
 
